@@ -35,8 +35,7 @@ class Data(db.Model):
         self.task = task
 
 
-# This is the index route where we are going to
-# query on all our employee data
+
 @app.route('/')
 def Index():
     all_data = Data.query.all()
@@ -65,7 +64,7 @@ def insert():
         return redirect(url_for('Index'))
 
 
-# this is our update route where we are going to update our employee
+
 @app.route('/update', methods=['GET', 'POST'])
 def update():
     if request.method == 'POST':
